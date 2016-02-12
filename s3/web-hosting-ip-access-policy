@@ -1,0 +1,43 @@
+{
+"Version": "2008-10-17",
+"Id": "PolicyAccessCtrl",
+"Statement": [
+    {
+        "Sid": "StmtAccessCtrl",
+        "Effect": "Deny",
+        "NotPrincipal": {
+            "AWS": "arn:aws:iam::[your AWS ID]:user/s3-deploy-user"
+        },
+        "Action": "s3:*",
+        "Resource": "arn:aws:s3:::[your site url]/*",
+        "Condition": {
+            "NotIpAddress": {
+                "aws:SourceIp": "[allow IP]"
+            }
+        }
+    },
+    {
+        "Sid": "StmtAccessCtrl",
+        "Effect": "Allow",
+        "Principal": {
+            "AWS": "*"
+        },
+        "Action": "s3:GetObject",
+        "Resource": "arn:aws:s3:::[your site url]/*",
+        "Condition": {
+            "IpAddress": {
+                "aws:SourceIp": "[allow IP]"
+            }
+        }
+    },
+    {
+        "Sid": "AllowBucketAndObjectsAccessFromCircleCI",
+        "Effect": "Allow",
+        "Principal": {
+            "AWS": "arn:aws:iam::[your AWS ID]:user/s3-deploy-user"
+        },
+        "Action": "s3:*",
+        "Resource": "arn:aws:s3:::[your site url]/*"
+    }
+]
+}
