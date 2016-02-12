@@ -9,7 +9,7 @@
             "AWS": "arn:aws:iam::[your AWS ID]:user/s3-deploy-user"
         },
         "Action": "s3:*",
-        "Resource": "arn:aws:s3:::[your site url]/*",
+        "Resource": "arn:aws:s3:::[your s3 bucket]/*",
         "Condition": {
             "NotIpAddress": {
                 "aws:SourceIp": "[allow IP]"
@@ -23,7 +23,7 @@
             "AWS": "*"
         },
         "Action": "s3:GetObject",
-        "Resource": "arn:aws:s3:::[your site url]/*",
+        "Resource": "arn:aws:s3:::[your s3 bucket]/*",
         "Condition": {
             "IpAddress": {
                 "aws:SourceIp": "[allow IP]"
@@ -37,7 +37,7 @@
             "AWS": "arn:aws:iam::[your AWS ID]:user/s3-deploy-user"
         },
         "Action": "s3:*",
-        "Resource": "arn:aws:s3:::[your site url]/*"
+        "Resource": "arn:aws:s3:::[your s3 bucket]/*"
     }
 ]
 }
