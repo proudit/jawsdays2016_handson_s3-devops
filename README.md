@@ -4,18 +4,18 @@
 
 ##情報
 - IAM
-   - User Name : jawsdays2016-s3-deploy-user
-   - Policy Name : jawsdays2016-s3-deploy-policy
-   - Access Key Id : ＜取得したAccess Key Id＞
-   - Secret Access Key : ＜取得した Secret Access Key＞
+   1. User Name : jawsdays2016-s3-deploy-user
+   2. Policy Name : jawsdays2016-s3-deploy-policy
+   3. Access Key Id : ＜取得したAccess Key Id＞
+   4. Secret Access Key : ＜取得した Secret Access Key＞
 
 - S3
-   - 本番バケット名 : prod.＜GitHubアカウント＞-jawsdays2016.jp
-   - ステージングバケット名 : stg.＜GitHubアカウント＞-jawsdays2016.jp
-   - リージョン : Tokyo
+   1. 本番バケット名 : prod.＜GitHubアカウント＞-jawsdays2016.jp
+   2. ステージングバケット名 : stg.＜GitHubアカウント＞-jawsdays2016.jp
+   3. リージョン : Tokyo
 
 - GitHub
-   - Fork先リポジトリ名 : [https://github.com/proudit/jawsdays-samplesite](https://github.com/proudit/jawsdays-samplesite)
+   1. Fork先リポジトリ名 : [https://github.com/proudit/jawsdays-samplesite](https://github.com/proudit/jawsdays-samplesite)
 
 　
 　　
